@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="7DTMPaydayLib" />
+		<Description value="Earn Player Points for time spent online.  Base Mod Only. Adds no Rewards." />
+		<Author value="Justin 'Chromecide' Pradier" />
+		<Version value="1" />
+		<Website value="https://github.com/7DaysToMod/PaydayLib" />
+	</ModInfo>
+</xml>
