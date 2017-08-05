@@ -1,0 +1,34 @@
+﻿<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>PayDay Products - Remove Product</h2>
+		<div class="col-md-12">&nbsp;</div>
+		<form method="POST" action="/settings/payday/itemstackremover">
+			<div class="form-group paydayField">
+				Are you sure you want remove the product "{product_name}"?
+			    <input type="hidden" name="product" id="product" value="{product_name}"/>
+			</div>
+			<button type="submit" class="btn btn-danger">Delete</button> <button type="button" class="btn btn-primary" onClick="document.location.href='/settings/payday/products';">Cancel</button>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+
+//	function onTimerEnabledChange(){
+//		if($("#timer_enabled").is(":checked")){
+//			$(".paydayTimerField").show();
+//		}else{
+//			$(".paydayTimerField").hide();
+//		}
+//	}
+
+//	$(document).ready(function(){
+//		$("#payday_enabled").prop('checked', {payday_enabled});
+//		$("#timer_enabled").prop('checked', {timer_enabled});
+//
+//		onpaydayEnabledChange();
+//		onTimerEnabledChange();
+//	});
+</script>

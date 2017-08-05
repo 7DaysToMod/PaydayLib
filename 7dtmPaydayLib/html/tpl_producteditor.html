@@ -1,0 +1,40 @@
+﻿<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>PayDay Products</h2>
+		<div class="col-md-12">&nbsp;</div>
+		<form method="POST" action="/settings/payday/products">
+		<table class="table table-striped">
+			<tr>
+				<th>Product Name</th>
+				<th>Description</th>
+				<th>Price</th>
+				<th>&nbsp;</th>
+			</tr>
+			
+			{product_list}
+		</table>
+		<button type="submit" class="btn btn-primary">Save</button> <button type="button" class="btn" onclick="document.location.href='/settings/payday/itemstackeditor';">Add ItemStack Product</button>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+
+//	function onTimerEnabledChange(){
+//		if($("#timer_enabled").is(":checked")){
+//			$(".paydayTimerField").show();
+//		}else{
+//			$(".paydayTimerField").hide();
+//		}
+//	}
+
+//	$(document).ready(function(){
+//		$("#payday_enabled").prop('checked', {payday_enabled});
+//		$("#timer_enabled").prop('checked', {timer_enabled});
+//
+//		onpaydayEnabledChange();
+//		onTimerEnabledChange();
+//	});
+</script>

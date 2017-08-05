@@ -1,0 +1,64 @@
+﻿<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>PayDay Settings</h2>
+		<div class="col-md-12">&nbsp;</div>
+		<form method="POST" action="/settings/payday/">
+			<div class="jumbotron" style="padding:1rem;1rem;">
+				<div class="form-group">
+				    <label class="form-check-label">
+					    <input class="form-check-input" type="checkbox" value="" name="payday_enabled" id="payday_enabled" onChange="onpaydayEnabledChange();">
+					    Enable PayDay
+					</label>
+				</div>
+				<div class="form-group paydayField">
+				    <label for="client_id">Currency Name</label>
+				    <input type="text" class="form-control" id="currency_name" name="currency_name" placeholder="Currency Name" value="{currency_name}"/>
+				</div>
+				<div class="form-group paydayField">
+				    <label for="client_id">Starting Balance</label>
+				    <input type="text" class="form-control" id="start_balance" name="start_balance" placeholder="Starting Balance" value="{start_balance}"/>
+				</div>
+				<div class="form-group paydayField">
+				    <label class="form-check-label">
+					    <input class="form-check-input" type="checkbox" value="" name="timer_enabled" id="timer_enabled" onChange="onTimerEnabledChange();">
+					    Enable Pay Timer
+					</label>
+				</div>
+				<div class="form-group paydayTimerField">
+				    <label for="client_id">Amount per Real World Minute</label>
+				    <input type="text" class="form-control" id="payday_rate" name="payday_rate" placeholder="Amount" value="{payday_rate}"/>
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+	function onpaydayEnabledChange(){
+		if($("#payday_enabled").is(":checked")){
+			$(".paydayField").show();
+		}else{
+			$(".paydayField").hide();
+		}
+	}
+
+	function onTimerEnabledChange(){
+		if($("#timer_enabled").is(":checked")){
+			$(".paydayTimerField").show();
+		}else{
+			$(".paydayTimerField").hide();
+		}
+	}
+
+	$(document).ready(function(){
+		$("#payday_enabled").prop('checked', {payday_enabled});
+		$("#timer_enabled").prop('checked', {timer_enabled});
+
+		onpaydayEnabledChange();
+		onTimerEnabledChange();
+	});
+
+</script>

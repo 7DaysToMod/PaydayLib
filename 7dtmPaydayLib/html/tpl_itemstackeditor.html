@@ -1,0 +1,48 @@
+﻿<div class="row">
+	<div class="col-md-12">&nbsp;</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<h2>PayDay Products</h2>
+		<div class="col-md-12">&nbsp;</div>
+		<form method="POST" action="/settings/payday/itemstackeditor">
+			<div class="form-group paydayField">
+			    <label for="client_id">Product Name</label>
+			    <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Product Name" value="{product_name}"/>
+			</div>
+			<div class="form-group paydayField">
+			    <label for="client_id">Block/Item</label>
+			    <select name="item_name" id="item_name">
+			    	{item_list_options}
+			    </select>
+			</div>
+			<div class="form-group paydayField">
+			    <label for="client_id">Quantity</label>
+			    <input type="text" class="form-control" id="item_qty" name="item_qty" placeholder="Item Qty" value="{item_qty}"/>
+			</div>
+			<div class="form-group paydayField">
+			    <label for="client_id">Max Bundles</label>
+			    <input type="text" class="form-control" id="item_max" name="item_max" placeholder="Max Bundles" value="{item_max}"/>
+			</div>
+			<button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</div>
+<script language="javascript">
+
+//	function onTimerEnabledChange(){
+//		if($("#timer_enabled").is(":checked")){
+//			$(".paydayTimerField").show();
+//		}else{
+//			$(".paydayTimerField").hide();
+//		}
+//	}
+
+//	$(document).ready(function(){
+//		$("#payday_enabled").prop('checked', {payday_enabled});
+//		$("#timer_enabled").prop('checked', {timer_enabled});
+//
+//		onpaydayEnabledChange();
+//		onTimerEnabledChange();
+//	});
+</script>
